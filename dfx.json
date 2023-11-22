@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "satBlockchain_backend": {
+      "main": "src/satBlockchain_backend/main.mo",
+      "type": "motoko"
+    },
+    "satBlockchain_frontend": {
+      "dependencies": [
+        "satBlockchain_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/satBlockchain_frontend/src/index.html"
+      },
+      "source": [
+        "src/satBlockchain_frontend/assets",
+        "dist/satBlockchain_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
